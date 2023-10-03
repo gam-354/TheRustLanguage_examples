@@ -19,3 +19,18 @@ jobs:
     - name: Build
       run: cargo build --verbose
       working-directory: ./ch3_functions
+
+  buildAll:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build all projects
+      run: |
+        for dir in ch*; do
+          if [ -d "$dir" ]; then
+            cd "$dir"
+            cargo build --release
+            cd ..
+          fi
+        done
