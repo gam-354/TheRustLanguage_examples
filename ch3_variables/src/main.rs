@@ -42,4 +42,19 @@ fn main() {
     let _z: char = 'Z';          // char type is 4 bytes logn (unicode)
     let _heart_eyed_cat = '😻';
     println!("Look at these characters: {_c}, {_z}, {_heart_eyed_cat}.");
+
+    // Tuples:
+    let _tup: (i32, f32, u8) = (500, 3.2, 0xAC);
+    let (x, _y, z) = _tup;
+    let _y = _tup.1;
+    println!("Tuple components: x={x}, y={_y}, z={z}");
+
+    // Arrays:
+    let _my_array: [u32; 4] = [0, 6, 3400, 2];  // [format; size]
+    let _my_other_arr = [77; 5];      // [value; size] -> [77, 77, 77, 77, 77]
+    let _third_element = _my_array[2];     // boundaries protection
+    println!("third element of array: {_third_element}");
+
+
+
 }
