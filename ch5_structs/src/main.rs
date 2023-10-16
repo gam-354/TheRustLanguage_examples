@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 // STRUCTS
 
 struct Car {

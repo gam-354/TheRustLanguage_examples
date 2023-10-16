@@ -1,3 +1,4 @@
+#![allow(unused)]
 #[derive(Debug)]        // This is to have the default Debug trait available for this struct
 struct Rectangle {
     width : u32,
